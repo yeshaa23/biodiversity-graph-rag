@@ -118,3 +118,23 @@ WHERE a.communityId = communityId
   AND b.communityId = communityId
 RETURN path
 LIMIT 150;
+
+//lihat year dominan per komunitas 
+MATCH (s:Species)<-[:OBSERVED_SPECIES]-(o:Occurrence)-[:RECORDED_IN_YEAR]->(y:Year)
+WHERE s.communityId IS NOT NULL
+WITH s.communityId AS communityId, y.value AS year, count(o) AS freq
+ORDER BY communityId, freq DESC
+RETURN
+  communityId,
+  collect({year: year, count: freq})[0..5] AS topYears
+LIMIT 10;
+
+// lihat country dominan per komunitas
+MATCH (s:Species)<-[:OBSERVED_SPECIES]-(o:Occurrence)-[:RECORDED_IN]->(c:Country)
+WHERE s.communityId IS NOT NULL
+WITH s.communityId AS communityId, c.name AS country, count(o) AS freq
+ORDER BY communityId, freq DESC
+RETURN
+  communityId,
+  collect({country: country, count: freq})[0..5] AS topCountries
+LIMIT 10;
