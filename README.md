@@ -582,7 +582,6 @@ OPENROUTER_MODEL
 | `notebook/2-text-to-cypher.ipynb` | Membantu membuat draft alur Text-to-Cypher menggunakan OpenRouter dan Neo4j serta membantu debugging output query. | Menambahkan schema graph sebagai context, menguji pertanyaan, menjalankan query hasil LLM ke Neo4j, dan memastikan hasil sesuai data. |
 | `notebook/3-llm-graph-builder.ipynb` | Membantu membuat draft pipeline ekstraksi habitat, threat, dan environment dari deskripsi species. | Menentukan sample species, membatasi 15 data, memvalidasi hasil ekstraksi, dan menyesuaikan hasilnya menjadi node serta relationship di Neo4j. |
 | `notebook/4a-graphrag_demo.ipynb` dan `4b-graphrag_demo.py` | Membantu membuat draft alur retrieval context dari Neo4j, prompt GraphRAG, dan format jawaban. | Menentukan context yang diambil dari Neo4j, menyesuaikan prompt, menjalankan demo, dan memastikan jawaban tetap berbasis data graph. |
-| `README.md` | Membantu merapikan struktur dokumentasi, instalasi, konfigurasi, cara menjalankan, arsitektur, dan dokumentasi penggunaan AI. | Menyesuaikan isi README dengan struktur repository final, nama file sebenarnya, hasil eksekusi, dan implementasi project yang dilakukan. |
 
 #### Contoh Prompt yang Digunakan
 
