@@ -12,7 +12,7 @@ Project ini membangun **biodiversity knowledge graph** dari data occurrence biod
 
 Selain membangun graph, project ini juga mengimplementasikan beberapa komponen utama, yaitu **Graph Analytics**, **Graph Machine Learning**, **LLM Text-to-Cypher**, **LLM Graph Builder**, dan **GraphRAG**. Dengan pendekatan ini, data biodiversitas tidak hanya disimpan dalam bentuk tabel, tetapi juga dianalisis melalui hubungan antar entitas dalam graph.
 
-Project ini menargetkan **Tier 4**, karena mencakup:
+Project ini mencakup:
 
 * ✅ LLM untuk Text-to-Cypher
 * ✅ LLM for Graph Builder
@@ -76,11 +76,16 @@ biodiversity-graph-rag/
 ├── .gitignore
 ├── .env.example
 │
-├── data/
-│   ├── gbif_biodiversity_graph.csv
-│   ├── species_descriptions.csv
-│   └── llm_graph_builder_extraction_15.csv
-│
+├── data/                                            
+│   ├── processed/                                 
+│   │   ├── fastrp-embedding.csv                    
+│   │   ├── kmeans-cluster.csv                      
+│   │   ├── kmeans-species-context.csv             
+│   │   ├── knn-similarity.csv                     
+│   │   └── llm-graph-builder-extraction.csv        
+│   │
+│   ├── gbif_biodiversity_graph.csv                 
+│   └── species_descriptions.csv                    
 ├── scripts/
 │   ├── text_to_cypher_debug.py
 │   ├── llm_graph_builder.py
@@ -558,23 +563,6 @@ exit
 
 ---
 
-### 📸 Screenshot Hasil Eksekusi
-
-Screenshot hasil eksekusi disimpan pada folder `screenshots/`.
-
-| No | File                               | Keterangan                                |
-| -- | ---------------------------------- | ----------------------------------------- |
-| 1  | `01_neo4j_connection.png`          | Bukti database Neo4j aktif dan terkoneksi |
-| 2  | `02_database_overview.png`         | Jumlah node berdasarkan label             |
-| 3  | `03_graph_schema_relationship.png` | Struktur relationship graph               |
-| 4  | `04_text_to_cypher_demo.png`       | Demo LLM Text-to-Cypher                   |
-| 5  | `05_graph_analytics_result.png`    | Hasil Graph Analytics                     |
-| 6  | `06_graph_ml_result.png`           | Hasil Graph Machine Learning              |
-| 7  | `07_llm_graph_builder_result.png`  | Hasil LLM Graph Builder                   |
-| 8  | `08_graphrag_demo.png`             | Demo GraphRAG                             |
-
----
-
 ### 📝 Hasil Utama
 
 #### Dataset dan Graph
@@ -679,7 +667,6 @@ Struktur video demo:
 | Nama               | NRP          |
 | ------------------ | -------------|
 | Ayesha Hana Azkiya | 5026231125   |
-| ------------------ | -------------|
 | Amandea Chandiki L | 5026231139   |
 
 ---
