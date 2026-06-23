@@ -87,22 +87,11 @@ biodiversity-graph-rag/
 │   └── graphrag_demo.py
 │
 ├── cypher/
-│   ├── 00_database_check.cypher
-│   ├── 01_import_graph.cypher
-│   ├── 02_graph_analytics.cypher
-│   ├── 03_graph_ml.cypher
-│   ├── 04_graph_builder_preview.cypher
-│   └── 05_graphrag_context_queries.cypher
-│
-└── screenshots/
-    ├── 01_neo4j_connection.png
-    ├── 02_database_overview.png
-    ├── 03_graph_schema_relationship.png
-    ├── 04_text_to_cypher_demo.png
-    ├── 05_graph_analytics_result.png
-    ├── 06_graph_ml_result.png
-    ├── 07_llm_graph_builder_result.png
-    └── 08_graphrag_demo.png
+    ├── 1_graph_insight.cypher
+    ├── 2_graph_analytics.cypher
+    ├── 3_graph_ml.cypher
+    ├── 4_graph_builder_preview.cypher
+    └── 5_graphrag_context_queries.cypher
 ```
 
 ---
@@ -127,9 +116,6 @@ Dataset utama yang digunakan adalah data biodiversitas Asia Tenggara yang dipero
 * Thailand
 * Viet Nam
 * Philippines
-
-Dataset ini memenuhi ketentuan tugas karena memiliki lebih dari **50 node** dan lebih dari **3 jenis entitas berbeda**.
-
 ---
 
 ### 🧩 Entity dan Graph Schema
@@ -688,47 +674,12 @@ Masukkan link YouTube di sini
 
 Struktur video demo:
 
-| Durasi  | Konten                                |
-| ------- | ------------------------------------- |
-| 1 menit | Latar belakang project dan arsitektur |
-| 2 menit | Demo eksekusi kode dan hasil          |
-| 1 menit | Analisis dan insight dari graph       |
-| 1 menit | Kesimpulan dan pembelajaran           |
-
----
-
-### ✅ Checklist Kesesuaian Instruksi
-
-| Komponen               | Status | Keterangan                                                                 |
-| ---------------------- | ------ | -------------------------------------------------------------------------- |
-| Neo4j 5.x              | ✅      | Database menggunakan Neo4j Desktop                                         |
-| GDS Plugin aktif       | ✅      | Digunakan untuk Graph Analytics dan Graph ML                               |
-| Cypher + Python        | ✅      | Query Cypher dan script Python tersedia                                    |
-| Dataset ≥50 node       | ✅      | Dataset biodiversitas memiliki lebih dari 50 node                          |
-| ≥3 entitas berbeda     | ✅      | Occurrence, Species, Country, Year, Taxonomy, Habitat, Threat, Environment |
-| Text-to-Cypher         | ✅      | Implementasi pada `text_to_cypher_debug.py`                                |
-| Graph Analytics        | ✅      | Jaccard, PageRank, Louvain                                                 |
-| Graph Machine Learning | ✅      | FastRP, KNN, K-Means                                                       |
-| LLM Graph Builder      | ✅      | Ekstraksi habitat, threat, environment                                     |
-| GraphRAG               | ✅      | Implementasi pada `graphrag_demo.py`                                       |
-| Screenshot             | ✅      | Tersedia pada folder `screenshots/`                                        |
-| AI usage documentation | ✅      | Dijelaskan pada README                                                     |
-| YouTube demo           | ⏳      | Ditambahkan setelah video diunggah                                         |
-
----
-
 ### 👥 Author
 
-| Nama               | Keterangan          |
-| ------------------ | ------------------- |
-| Ayesha Hana Azkiya | Developer / Student |
-
----
-
-### 📌 Repository
-
-```text
-https://github.com/yeshaa23/biodiversity-graph-rag
-```
+| Nama               | NRP          |
+| ------------------ | -------------|
+| Ayesha Hana Azkiya | 5026231125   |
+| ------------------ | -------------|
+| Amandea Chandiki L | 5026231139   |
 
 ---
